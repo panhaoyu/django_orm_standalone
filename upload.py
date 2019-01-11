@@ -11,4 +11,8 @@ if os.path.exists('dist'):
 os.system('python setup.py sdist bdist_wheel')
 os.system('twine upload dist/*')
 
+os.system('git add .')
+os.system('git commit -m "Auto upload."')
+os.system('git push')
+
 input('Press Enter to Exit.')
